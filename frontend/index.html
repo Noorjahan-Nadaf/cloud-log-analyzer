@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloud Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>☁ Cloud System Monitor</header>
+
+<div class="container">
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search logs...">
+        
+        <select id="filter">
+            <option value="ALL">All</option>
+            <option value="INFO">INFO</option>
+            <option value="WARNING">WARNING</option>
+            <option value="ERROR">ERROR</option>
+        </select>
+
+        <button onclick="loadLogs()">Refresh</button>
+        <span id="status">Connected</span>
+    </div>
+
+    <div class="card">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <table id="logTable">
+        <thead>
+            <tr>
+                <th>Level</th>
+                <th>Message</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+
+<footer>Real-Time Cloud Monitoring Dashboard</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
