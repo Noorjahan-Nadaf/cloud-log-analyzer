@@ -1,4 +1,4 @@
-const API = "";
+const API = "https://cloud-log-analyzer.onrender.com";
 
 let chart;
 
